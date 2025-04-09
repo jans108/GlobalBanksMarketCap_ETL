@@ -32,7 +32,7 @@ project_root/
 
 ```bash
 git clone https://github.com/jans108/largest-banks-etl.git](https://github.com/jans108/GlobalBanksMarketCap_ETL
-cd largest-banks-etl
+cd GlobalBanksMarketCap_ETL
 ```
 
 
