@@ -44,7 +44,7 @@ python main.py
 
 3. **Check the results in the following folders:**
 
-- `CSV_file/largest_banks.csv` — processed CSV output
+- `CSV_file/Largest_banks_data.csv` — processed CSV output
 - `Database/Banks.db` — SQLite database
 - `Log_file/code_log.txt` — log file containing execution details
 
