@@ -1,10 +1,17 @@
-import logger
-import banks_project
 import sqlite3
+
+import banks_project
+import logger
 
 url = "https://en.wikipedia.org/wiki/List_of_largest_banks"
 table_attrib = ["Name", "MC_USD_Billion"]
-final_table_attrib = ["Name", "MC_USD_Billion", "MC_GDP_Billion", "MC_EUR_Billion", "MC_INR_Billion"]
+final_table_attrib = [
+    "Name",
+    "MC_USD_Billion",
+    "MC_GDP_Billion",
+    "MC_EUR_Billion",
+    "MC_INR_Billion",
+]
 csv_path = "GlobalBanksMarketCap_ETL/CSV_file/Largest_banks_data.csv"
 exchange_csv_path = "GlobalBanksMarketCap_ETL/CSV_file/exchange_rate.csv"
 db_name = "GlobalBanksMarketCap_ETL/Database/Banks.db"
@@ -29,7 +36,7 @@ with sqlite3.connect(db_name) as conn:
     banks_project.load_to_db(df, table_name, conn)
     banks_project.run_queries(first_query, conn)
     banks_project.run_queries(second_query, conn)
-    banks_project.run_queries(third_query, conn) 
+    banks_project.run_queries(third_query, conn)
 
 logger.log_progress("SQL Connection initiated")
 logger.log_progress("Data loaded to Database as a table, Executing queries")

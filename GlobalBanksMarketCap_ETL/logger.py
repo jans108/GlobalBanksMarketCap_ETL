@@ -4,6 +4,7 @@ from datetime import datetime
 log_path = "GlobalBanksMarketCap_ETL/Log_file/code_log.txt"
 datetime_pattern = "%Y-%m-%d %H:%M:%S"
 
+
 def log_progress(message: str):
     try:
         now = datetime.now()
